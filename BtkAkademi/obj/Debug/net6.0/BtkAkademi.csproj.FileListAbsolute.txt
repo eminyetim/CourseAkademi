@@ -28,3 +28,4 @@ C:\Users\eminy\BtkAkademi\BtkAkademi\obj\Debug\net6.0\refint\BtkAkademi.dll
 C:\Users\eminy\BtkAkademi\BtkAkademi\obj\Debug\net6.0\BtkAkademi.pdb
 C:\Users\eminy\BtkAkademi\BtkAkademi\obj\Debug\net6.0\BtkAkademi.genruntimeconfig.cache
 C:\Users\eminy\BtkAkademi\BtkAkademi\obj\Debug\net6.0\ref\BtkAkademi.dll
+C:\Users\eminy\BtkAkademi\BtkAkademi\obj\Debug\net6.0\BtkAkademi.sourcelink.json
