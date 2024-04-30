@@ -21,7 +21,8 @@ namespace BtkAkademi.Controllers
             //FromForm verinin formdan geliceğini bildiryoruz.
             //Model içindeki değişkenlerin doldurulması model binding.
             
-            return View();
+            Repository.Add(model);
+            return Redirect("/");
         }
 
     }
