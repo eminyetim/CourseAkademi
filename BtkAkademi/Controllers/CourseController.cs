@@ -7,7 +7,8 @@ namespace BtkAkademi.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = Repository.Application;
+            return View(model);
         }
 
         public IActionResult Apply()
