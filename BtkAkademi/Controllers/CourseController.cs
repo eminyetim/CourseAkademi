@@ -22,7 +22,7 @@ namespace BtkAkademi.Controllers
             //Model içindeki değişkenlerin doldurulması model binding.
             
             Repository.Add(model);
-            return Redirect("/");
+            return View("FeedBack",model);
         }
 
     }
