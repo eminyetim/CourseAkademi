@@ -20,7 +20,7 @@ namespace BtkAkademi.Controllers
         {
             if(Repository.Applications.Any(c => c.Email.Equals(model.Email)))
             {
-                ModelState.AddModelError("","There is already an application for you.")
+                ModelState.AddModelError("","There is already an application for you.");
             }
             //FromForm verinin formdan geliceğini bildiryoruz.
             //Model içindeki değişkenlerin doldurulması model binding.
