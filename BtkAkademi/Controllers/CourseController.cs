@@ -7,10 +7,9 @@ namespace BtkAkademi.Controllers
     {
         public IActionResult Index()
         {
-            var model = Repository.Application;
+            var model = Repository.Applications;
             return View(model);
         }
-
         public IActionResult Apply()
         {
             return View();
@@ -19,12 +18,19 @@ namespace BtkAkademi.Controllers
         [ValidateAntiForgeryToken] // Güvenlik amaçlı tarayıcıyı doğrular.
         public IActionResult Apply([FromForm] Candidate model) // Apply fonksiyonu overloading yaptık. 
         {
+            if(Repository.Applications.Any(c => c.Email.Equals(model.Email)))
+            {
+                ModelState.AddModelError("","There is already an application for you.")
+            }
             //FromForm verinin formdan geliceğini bildiryoruz.
             //Model içindeki değişkenlerin doldurulması model binding.
-            
-            Repository.Add(model);
-            return View("FeedBack",model);
+            if (ModelState.IsValid)
+            {
+                Repository.Add(model);
+                return View("FeedBack", model);
+            }
+            else
+                return View();
         }
-
     }
 }

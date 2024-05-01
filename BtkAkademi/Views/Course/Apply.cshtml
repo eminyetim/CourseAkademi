@@ -5,6 +5,9 @@
 </div>
 
 <form method="post" asp-action="Apply">
+
+    <div class="text-danger" asp-validation-summary="All"></div>
+
     <div class="form-group my-2"> <!-- m = Margin(dış boşluk) y = y ekseni -->
         <label asp-for="Email"></label>
         <input asp-for="Email" class="form-control" />
@@ -33,7 +36,7 @@
     <fieldset>
         <legend>Select One Course</legend>
         <p>
-            <input id="mvc" type="radio" asp-for="SelectedCourse" value="Asp.Net Core MVC">
+            <input id="mvc" type="radio" asp-for="SelectedCourse" value="Asp.Net Core MVC" checked>
             <label>ASP.NET Core MVC</label>
         </p>
         <p>
